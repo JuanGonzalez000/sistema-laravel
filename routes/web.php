@@ -38,6 +38,7 @@ Route::group(['middleware' => ['Digitador']], function() {
 	Route::put('/articulo/desactivar', 'ArticuloController@desactivar');
 	Route::put('/articulo/activar', 'ArticuloController@activar');
 	Route::get('/articulo/buscarArticulo', 'ArticuloController@buscarArticulo');
+	Route::get('/articulo/listarArticulo', 'ArticuloController@listarArticulo');
 
 	Route::get('/proveedor', 'ProveedorController@index');
 	Route::post('/proveedor/registrar', 'ProveedorController@store');
@@ -47,6 +48,8 @@ Route::group(['middleware' => ['Digitador']], function() {
 	Route::get('/ingreso', 'IngresoController@index');
 	Route::post('/ingreso/registrar', 'IngresoController@store');
 	Route::put('/ingreso/desactivar', 'IngresoController@desactivar');
+	Route::get('/ingreso/obtenerCabecera', 'IngresoController@obtenerCabecera');
+	Route::get('/ingreso/obtenerDetalles', 'IngresoController@obtenerDetalles');
 });	
 
 Route::group(['middleware' => ['Funcionario']], function() {
@@ -77,6 +80,7 @@ Route::group(['middleware' => ['Administrador']], function() {
 	Route::put('/articulo/desactivar', 'ArticuloController@desactivar');
 	Route::put('/articulo/activar', 'ArticuloController@activar');
 	Route::get('/articulo/buscarArticulo', 'ArticuloController@buscarArticulo');
+	Route::get('/articulo/listarArticulo', 'ArticuloController@listarArticulo');
 
 	Route::get('/proveedor', 'ProveedorController@index');
 	Route::post('/proveedor/registrar', 'ProveedorController@store');
@@ -99,6 +103,8 @@ Route::group(['middleware' => ['Administrador']], function() {
 	Route::get('/ingreso', 'IngresoController@index');
 	Route::post('/ingreso/registrar', 'IngresoController@store');
 	Route::put('/ingreso/desactivar', 'IngresoController@desactivar');
+	Route::get('/ingreso/obtenerCabecera', 'IngresoController@obtenerCabecera');
+	Route::get('/ingreso/obtenerDetalles', 'IngresoController@obtenerDetalles');
 });	
 
 
